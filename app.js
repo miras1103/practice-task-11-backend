@@ -35,13 +35,23 @@ connectDB();
 // ===== HOME ROUTE =====
 app.get("/", (req, res) => {
   res.json({
-    message: "Products API is running",
+    message: "Backend API is running",
     endpoints: {
-      allProducts: "/api/products",
-      singleProduct: "/api/products/:id",
-      createProduct: "POST /api/products",
-      updateProduct: "PUT /api/products/:id",
-      deleteProduct: "DELETE /api/products/:id",
+      products: {
+        getAll: "GET /api/products",
+        getOne: "GET /api/products/:id",
+        create: "POST /api/products",
+        update: "PUT /api/products/:id",
+        delete: "DELETE /api/products/:id",
+      },
+      items: {
+        getAll: "GET /api/items",
+        getOne: "GET /api/items/:id",
+        create: "POST /api/items",
+        update: "PUT /api/items/:id",
+        patch: "PATCH /api/items/:id",
+        delete: "DELETE /api/items/:id",
+      },
     },
   });
 });
