@@ -1,4 +1,4 @@
-const API_KEY = "secret123";
+const API_KEY = "miras123";
 
 function authMiddleware(req, res, next) {
   const apiKey = req.headers["x-api-key"];
